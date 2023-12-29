@@ -1,0 +1,27 @@
+{
+
+  "name" : "Hello Extensions",
+  "description": "Base level Extension",
+  "options_page" : "options.html",
+  "version": "1.0",
+  "manifest_version" : 2,
+  "browser_action" : {
+    "default_popup" : "popup.html",
+    "default_icon" : "icon.png"
+  },
+  "commands" : {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default" : "Ctrl+Shift+F",
+        "mac" : "MacCtrl+Shift+F"
+      },
+      "description": "Opnes popup.html"
+    }
+  },
+  "background": {
+    "scripts" : ["background.js"],
+    "persistent": true
+  },
+  "permissions": ["storage", "declarativeContent","activeTab"]
+
+}
